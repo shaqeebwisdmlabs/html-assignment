@@ -260,10 +260,24 @@ body {
 
 .btn--sign-up {
   background-color: var(--clr-primary-400);
+  border: 2px solid var(--clr-primary-400);
+  transition: all 0.3s ease;
+}
+
+.btn--sign-up:is(:hover, :focus-visible) {
+  background-color: transparent;
+  border-color: var(--clr-neutral-100);
 }
 
 .btn--cta {
-  border: 2px solid currentColor;
+  border: 2px solid var(--clr-neutral-100);
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn--cta:is(:hover, :focus-visible) {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-neutral-900);
 }
 
 /* header */
@@ -271,7 +285,7 @@ body {
 .header-wrapper {
   align-items: center;
   justify-content: space-between;
-  padding: 1em 0;
+  padding: 1.5em 0;
 }
 
 .logo {
@@ -282,9 +296,76 @@ body {
   list-style: none;
 }
 
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
 .nav-link > a {
   text-decoration: none;
-  color: var(--clr-neutral-100);
+  color: var(--clr-neutral-900);
+}
+
+.mobile-nav-toggle {
+  z-index: 999;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.125em;
+}
+
+.mobile-nav-toggle[aria-expanded="true"] .icon-hamburger {
+  display: none;
+}
+
+.mobile-nav-toggle[aria-expanded="false"] .icon-close {
+  display: none;
+}
+
+.primary-navigation {
+  display: none;
+  transform: translateX(200%);
+  transition: transform 0.3s ease;
+}
+
+.primary-navigation[data-visible] {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 40%;
+  z-index: 99;
+  background-color: var(--clr-neutral-300);
+  padding: 5em 2em;
+  transform: translateX(0);
+}
+
+@media (width >= 50em) {
+  .mobile-nav-toggle {
+    display: none;
+  }
+
+  .primary-navigation {
+    display: block;
+    transform: none;
+  }
+
+  .nav-list {
+    flex-direction: row;
+  }
+
+  .nav-link > a {
+    color: var(--clr-neutral-100);
+    padding: 0.125em 0.5em;
+  }
+
+  .nav-link > a:is(:hover, :focus-visible) {
+    color: var(--clr-primary-400);
+  }
 }
 
 /* testimonial */
