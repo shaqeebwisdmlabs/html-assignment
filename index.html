@@ -14,79 +14,100 @@
     <title>The Odin Project</title>
   </head>
   <body>
-    <header class="header | flex bg-neutral-900 text-neutral-100">
-      <h1 class="logo | fw-bold fs-title-sm">Logo</h1>
-      <nav class="primary-navigation">
-        <ul class="flex">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Testimonial</a></li>
-        </ul>
-      </nav>
+    <header class="header | bg-neutral-900 text-neutral-100">
+      <div class="header-wrapper | container flex">
+        <a href="#" class="logo | fw-bold fs-title-sm text-neutral-100">Logo</a>
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <img src="/images/icon-hamburger.svg" class="icon-hamburger" alt="" />
+          <img src="/images/icon-close.svg" class="icon-close" alt="" />
+          <span class="visually-hidden">Menu</span>
+        </button>
+        <nav class="primary-navigation" id="primary-navigation">
+          <ul aria-label="primary navigation" class="nav-list">
+            <li class="nav-link"><a href="#">Home</a></li>
+            <li class="nav-link"><a href="#">Features</a></li>
+            <li class="nav-link"><a href="#">Testimonial</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
-      <section class="hero |">
-        <div class="hero__body">
-          <h1 class="fw-bold fs-title-lg">This website is awesome</h1>
-          <p>
-            This website has some subtest that goes here under the main title.
-            It's a smaller font and the color is lower contrast.
+      <section class="hero | padding-block bg-neutral-900 text-neutral-100">
+        <div class="hero-wrapper | container">
+          <div class="hero__body gap-lg">
+            <h1 class="fw-bold fs-title-lg">This website is awesome</h1>
+            <p>
+              This website has some subtest that goes here under the main title.
+              It's a smaller font and the color is lower contrast.
+            </p>
+            <a href="#" class="btn btn--sign-up">Sign Up</a>
+          </div>
+          <div class="hero__image"></div>
+        </div>
+      </section>
+      <section class="information | padding-block">
+        <div class="information-wrapper | container">
+          <h2 class="fw-bold fs-title">Some Random Information</h2>
+          <div class="info-group">
+            <div class="info">
+              <div class="info__image"></div>
+              <p class="info__text">
+                This is some subtext under an illustration or image
+              </p>
+            </div>
+            <div class="info">
+              <div class="info__image"></div>
+              <p class="info__text">
+                This is some subtext under an illustration or image
+              </p>
+            </div>
+            <div class="info">
+              <div class="info__image"></div>
+              <p class="info__text">
+                This is some subtext under an illustration or image
+              </p>
+            </div>
+            <div class="info">
+              <div class="info__image"></div>
+              <p class="info__text">
+                This is some subtext under an illustration or image
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="testimonial | bg-neutral-300 padding-block">
+        <div class="testimonial-wrapper | container">
+          <p class="quote | fw-light">
+            <i
+              >This is an inspiring quote, or a testimonial from a customer.
+              Maybe it's just filling up space, or maybe people will actually
+              read it. Who knows? All I know is that it looks nice.</i
+            >
           </p>
-          <a href="#" class="btn btn--sign-up">Sign Up</a>
-        </div>
-        <div class="hero__image"></div>
-      </section>
-      <section class="information |">
-        <h2 class="fw-bold fs-title">Some Random Information</h2>
-        <div class="info-group">
-          <div class="info">
-            <div class="info__image"></div>
-            <p class="info__text">
-              This is some subtext under an illustration or image
-            </p>
-          </div>
-          <div class="info">
-            <div class="info__image"></div>
-            <p class="info__text">
-              This is some subtext under an illustration or image
-            </p>
-          </div>
-          <div class="info">
-            <div class="info__image"></div>
-            <p class="info__text">
-              This is some subtext under an illustration or image
-            </p>
-          </div>
-          <div class="info">
-            <div class="info__image"></div>
-            <p class="info__text">
-              This is some subtext under an illustration or image
-            </p>
-          </div>
+          <span class="quote-by | fw-semi-bold">- Thor, God of Thunder</span>
         </div>
       </section>
-      <section class="testimonial | bg-neutral-300">
-        <p class="quote | fw-light fs-title">
-          <i
-            >This is an inspiring quote, or a testimonial from a customer. Maybe
-            it's just filling up space, or maybe people will actually read it.
-            Who knows? All I know is that it looks nice.</i
-          >
-        </p>
-        <span class="quote-by | fw-semi-bold">-Thor, God of Thunder</span>
-      </section>
-      <section class="cta">
-        <div class="cta__body">
-          <h2>Call to action! It's time!</h2>
-          <p>
-            Sign up for out product by clicking that button right over there!
-          </p>
+      <section class="cta | padding-block">
+        <div class="cta-wrapper | container bg-primary-400 text-neutral-100">
+          <div class="cta__body | gap-sm">
+            <h2 class="fw-bold fs-title-sm">Call to action! It's time!</h2>
+            <p>
+              Sign up for out product by clicking that button right over there!
+            </p>
+          </div>
+          <a href="#" class="btn btn--cta">Sign Up</a>
         </div>
-        <a href="#" class="btn btn--cta">Sign Up</a>
       </section>
     </main>
     <footer class="primary-footer | bg-neutral-900 text-neutral-100">
-      <span class="fs-body-sm">Copyright © The Odin Project 2023</span>
+      <div class="footer-wrapper | container">
+        <span class="fs-body-sm">Copyright © The Odin Project 2023</span>
+      </div>
     </footer>
   </body>
 </html>
