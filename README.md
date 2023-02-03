@@ -1,12 +1,6 @@
 # Screenshots
 
-### Desktop
-
 ![](./screenshot.png)
-
-### Mobile
-
-![](./screenshot-mob.png)
 
 ### Links
 
