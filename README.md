@@ -1,4 +1,4 @@
-# Screenshots
+### Screenshot
 
 ![](./screenshot.png)
 
